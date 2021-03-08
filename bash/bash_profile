@@ -6,3 +6,8 @@ alias ..="cd.."
 alias ...="cd ../../"
 alias ....="cd ../../../"
 
+# Key bindings, up/down arrow searches through history
+# to know scape secuences type cat then type keys 
+# and replace ^[ by \e
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
