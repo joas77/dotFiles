@@ -1,6 +1,7 @@
 alias ll="ls -l"
 alias la="ls -la"
 alias cls="clear"
+alias history="h"
 
 alias cd..="cd .."
 alias ..="cd.."
