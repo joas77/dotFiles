@@ -25,9 +25,6 @@ set cursorline
 set autoindent
 set smartindent
 
-" Fuzzy finder
-set rtp+=/usr/local/opt/fzf 
-
 "show file name
 set laststatus=2
 "*******************************************
@@ -42,5 +39,13 @@ au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
-"let skip_defaults_vim=1
-"call pathogen#helptags()
+" ******************** Plugin section **************
+call plug#begin('~/.vim/plugged')
+
+" Control sintax highlighting
+Plug 'burneyy/vim-winccoa'
+
+Plug 'preservim/nerdtree'
+" Plugin outside ~/.vim/plugged with post-update hook
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+call plug#end()
