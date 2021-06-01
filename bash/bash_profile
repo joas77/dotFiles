@@ -7,6 +7,7 @@ alias cd..="cd .."
 alias ..="cd.."
 alias ...="cd ../../"
 alias ....="cd ../../../"
+alias qfind="find . -iname"
 
 # Key bindings, up/down arrow searches through history
 # to know scape secuences type cat then type keys 
