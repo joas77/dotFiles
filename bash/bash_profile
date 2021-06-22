@@ -8,6 +8,7 @@ alias ..="cd.."
 alias ...="cd ../../"
 alias ....="cd ../../../"
 alias qfind="find . -iname"
+alias gitlist_my_branches="git for-each-ref --format=' %(authorname) %09 %(refname)' --sort=authorname  | grep '$(git config user.name)'"
 
 # Key bindings, up/down arrow searches through history
 # to know scape secuences type cat then type keys 
