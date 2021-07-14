@@ -3,13 +3,13 @@
 # grep function declaration
 function grepFunc()
 {
-    grep -rnw -E "\w+ $1 *"
+    grep -rinw -E "\w+ $1 *"
 }
 
 # grep variable assignment
 function grepVarA()
 {
-    grep -rnE "$1\s*=" * 
+    grep -rinE "$1\s*=" * 
 }
 
 function grepPublic()
