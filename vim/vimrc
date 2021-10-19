@@ -28,6 +28,10 @@ set smartindent
 "show file name
 set laststatus=2
 "*******************************************
+" replace 120 for your desired code guidelines
+" sets a vertical bar at column 120th
+set colorcolumn=120
+set tabpagemax=100
 
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
