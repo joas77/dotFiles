@@ -17,3 +17,11 @@ function grepPublic()
     path=$1
     grep -rnE "public\s*\w{2}+" $path
 }
+
+function rmSwpFiles()
+{
+  path=$1
+  echo removing next files:
+  find . -name "*.swp"
+  find . -name "*.swp" | xargs rm
+}
