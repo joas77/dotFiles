@@ -15,8 +15,8 @@ cd ~/joasDotSettings
 # TODO: where should be located dotFiles repo?
 cd dotFiles
 
-cp vim/vimrc ~/.vimrc
-cp vim/gvimrc ~/.gvimrc
+cp /etc/vim/vimrc ~/.vimrc
+cp /etc/vim/gvimrc ~/.gvimrc
 
 RCFILE="$HOME/.bashrc"
 
