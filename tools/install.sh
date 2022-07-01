@@ -9,11 +9,10 @@ echo installing dot files settings...
 
 DOT_FILES_PATH="$HOME/joasDotSettings"
 
-# mkdir ~/joasDotSettings
+mkdir -p ~/joasDotSettings
 cd ~/joasDotSettings
-# 
-# git clone https://github.com/joas77/dotFiles.git
 
+# TODO: where should be located dotFiles repo?
 cd dotFiles
 
 cp vim/vimrc ~/.vimrc
