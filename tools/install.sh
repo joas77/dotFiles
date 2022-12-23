@@ -15,9 +15,11 @@ cd ~/joasDotSettings
 # TODO: where should be located dotFiles repo?
 cd dotFiles
 
-cp /etc/vim/vimrc ~/.vimrc
-cp /etc/vim/gvimrc ~/.gvimrc
+echo creating vim settings...
+cp ./vim/vimrc ~/.vimrc
+cp ./vim/gvimrc ~/.gvimrc
 
+echo backing up .bashrc file...
 RCFILE="$HOME/.bashrc"
 
 TODAY=$(date -I)
@@ -26,6 +28,7 @@ echo "backing up current $RCFILE to ${BACKUP_RC} ..."
 
 cp "$RCFILE" "$BACKUP_RC"
 
+echo updating .bashrc file...
 cat bash/bash_profile >> $RCFILE
 echo "source \"${DOT_FILES_PATH}/dotFiles/bash/functions.sh\"" >> $RCFILE ;
 
