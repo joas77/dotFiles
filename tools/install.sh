@@ -1,34 +1,25 @@
 #!/usr/bin/env bash
 
-DEBUG_ON=1
-if $DEBUG_ON; then
-    set -x
-fi
-
 echo installing dot files settings...
 
-DOT_FILES_PATH="$HOME/joasDotSettings"
+DOT_FILES_PATH="$HOME/.dotSettings"
 
-mkdir -p ~/joasDotSettings
-cd ~/joasDotSettings
+mkdir -p $DOT_FILES_PATH
+cd $DOT_FILES_PATH
 
-# TODO: where should be located dotFiles repo?
+cd $DOT_FILES_PATH
+echo cloning dotFiles repo...
+git clone git@github.com:joas77/dotFiles.git
+
 cd dotFiles
 
 echo creating vim settings...
 cp ./vim/vimrc ~/.vimrc
 cp ./vim/gvimrc ~/.gvimrc
 
-echo backing up .bashrc file...
-RCFILE="$HOME/.bashrc"
+RCFILE="$HOME/.bash_aliases"
 
-TODAY=$(date -I)
-BACKUP_RC="${RCFILE}_backup_${TODAY}"
-echo "backing up current $RCFILE to ${BACKUP_RC} ..."
-
-cp "$RCFILE" "$BACKUP_RC"
-
-echo updating .bashrc file...
-cat bash/bash_profile >> $RCFILE
+echo updating .bash_aliases file...
+cat ./bash/bash_profile >> $RCFILE
 echo "source \"${DOT_FILES_PATH}/dotFiles/bash/functions.sh\"" >> $RCFILE ;
 
